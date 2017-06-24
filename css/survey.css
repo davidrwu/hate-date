@@ -1,0 +1,105 @@
+body {
+
+  font-family: 'Lobster Two', cursive;
+  font-size: 24px;
+  /*font-family: 'Permanent Marker', cursive;*/
+  /*font-family: 'Walter Turncoat', cursive*/
+  /*font-family: 'Rock Salt';*/
+  background-image: url('couple.jpg');
+}
+
+h2{
+  font-size: 36px;
+  color: white;
+}
+
+.main-button-container{
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mainArea{
+  font-size: 36px;
+  text-align: center;
+}
+
+.btn-danger,
+.btn-primary {
+  font-size: 32px;
+}
+
+.btn-success {
+  font-size: 24px;
+}
+
+.navbar-right-custom {
+  font-size: 25px;
+  color: white;
+}
+
+nav {
+  color: white;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10px;
+  background-color: Indianred;
+  /*background-image: url('geoheart.jpg');*/
+}
+
+.navbar-collapse{
+  color: white;
+}
+
+.userName {
+  font-size: 30px;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-me-content {
+  border: solid;
+  height: 600px;
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hate-content {
+  border: solid;
+  height: 600px;
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.wrap {
+  padding-bottom: 15px;
+}
+
+#profile-image {
+  padding: 10px;
+}
+
+footer {
+  background-color: #FBBBB9;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.mainArea {
+  padding-bottom:20px;
+}
+
+.submitBtn {
+  padding-bottom:10px;
+}
+
+.main-button-container {
+  text-align: center;
+  padding-top:10px;
+}
+
+.center-block{
+  width:100%;
+}

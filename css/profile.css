@@ -1,0 +1,99 @@
+body {
+  background-color: Indianred;
+}
+
+.navbar-right-custom {
+  font-size:25px;
+  padding-top:10px;
+}
+
+nav {
+  font-family: 'Lobster Two', cursive;
+  padding-left:10%;
+  padding-right:10%;
+  padding-bottom:10px;
+}
+
+.userName {
+  font-size: 30px;
+  text-align: center;
+  padding-top:25px;
+}
+
+.about-me-content {
+  border:solid;
+  height:700px;
+  overflow:auto;
+  background-color:white;
+  text-align: center;
+  padding:20px;
+}
+
+.hatebox {
+  border:solid;
+  height:600px;
+  background-color:white;
+  text-align: center;
+  padding:20px;
+}
+
+.wrap {
+  padding-bottom:15px;
+}
+
+#profile-image {
+  padding:10px;
+}
+
+footer {
+  font-family: 'Lobster Two', cursive;
+  font-size: 20px;
+  background-color:#FBBBB9;
+  padding:20px;
+}
+
+/* Input Button Styling */
+label.upload-image {
+  width: 100px;
+  height: 40px;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+#location-area {
+  border:solid;
+  overflow: auto;
+  background-color:white;
+  text-align: center;
+  padding:20px;
+}
+
+#hate-content {
+  float:left;
+}
+
+.panel-title {
+  text-align: center;
+}
+
+.weatherDiv {
+  padding:10px;
+  font-size:15px;
+}
+
+.weatherQuestion {
+color:blue;
+font-weight: bold;
+font-size:40px;
+}
+
+.weatherHeader {
+font-weight: bold;
+font-size:30px;
+}
+
+.showDiv {
+  padding:10px;
+  font-size: 20px;
+}

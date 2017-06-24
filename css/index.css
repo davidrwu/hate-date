@@ -1,0 +1,104 @@
+body {
+  font-family: 'Lobster Two', cursive;
+}
+
+.main {
+  background-color: Indianred;
+  width:100%;
+}
+
+.logo {
+  background-color:black;
+  font-weight:bold;
+  padding-top:20px;
+  padding-bottom:20px;
+  font-size:50px;
+  margin:0;
+}
+
+h3 {
+  font-size:30px;
+}
+
+nav {
+  padding-left:10%;
+  padding-right:10%;
+  padding-bottom:20px;
+}
+
+.btn-info {
+  margin-left:30px;
+  background-color:#FF2400;
+}
+
+#logo {
+  padding-left:50px;
+  padding-right:40px;
+}
+
+.navbar-right {
+  padding-top:30px;
+}
+
+.navbar {
+  overflow: auto;
+}
+
+.logo,
+.headliner,
+.dropdown {
+  color:white;
+}
+
+.signup{
+  text-align: center;
+  font-size:20px;
+  padding-bottom:70px;
+}
+
+.btn {
+  margin-top:10px;
+  font-size: 20px;
+}
+
+.btn-mid {
+  background-color: black;
+  color:white;
+}
+
+.bodySubmit {
+  padding-top:20px;
+}
+
+select {
+  border-radius: 10px;
+  font-size:20px;
+}
+
+footer {
+  background-color:#FBBBB9;
+  padding:10px;
+  font-size: 15px;
+}
+
+.info,
+.copyright,
+.images {
+  padding:5px;
+}
+
+.weatherDiv {
+  padding:10px;
+  color:white;
+  font-size:15px;
+}
+
+.weatherHeader {
+  font-weight: bold;
+  font-size:30px;
+  color:white;
+}
+
+.profileLink {
+  font-size:40px;
+}

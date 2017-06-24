@@ -1,177 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Survey Page</title>
+
+  <title>Survey HTML page</title>
+
+  <!-- Boostrap Stylesheet -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
-    <style type="text/css">
-      body{
-        background-color:#F70D1A;
-      }
-      .navbar-right-custom {
-        font-size:25px;
-        padding-top:10px;
-      }
-      nav {
-        padding-left:10%;
-        padding-right:10%;
-        padding-bottom:10px;
-      }
-      .userName {
-        font-size: 30px;
-        text-align: center;
-        padding:20px;
-      }
-      .about-me-content {
-        border:solid;
-        overflow:auto;
-        background-color:white;
-        text-align: center;
-        padding:20px;
-      }
-      .hatebox{
-        border:solid;
-        height:600px;
-        background-color:white;
-        text-align: center;
-        padding:20px;
-      }
-      .wrap {
-        padding-bottom:15px;
-      }
-      #profile-image {
-        padding:10px;
-      }
-      footer {
-        background-color:#FBBBB9;
-        padding:10px;
-        width:100%;
-        font-size: 15px;
-      }
-      
-      /* Input Button Styling */
 
-      label.upload-image{
-        width: 100px;
-        height: 40px;
-        background-color: black;
-        text-align: center;
-        color: white;
-      }
+  <!-- Our own CSS stylesheet -->
+  <link rel="stylesheet" href="css/survey.css" media="screen">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Lobster+Two" rel="stylesheet">
 
-      #restaurant-area{
-        border:solid;
-        height:100px;
-        background-color:white;
-        text-align: center;
-        padding:20px;
-      }
-
-      #hate-content{
-        float:left;
-      }
-
-      .box {
-        padding:20px;
-      }
-
-      h2{
-        font-size: 36px;
-        font-family: ITC Korinna;
-
-      }
-
-      .main-button-container{
-        margin-top: 25px;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      body{
-        background-color: Indianred;
-        font-family: ITC Korinna;
-        color: black;
-      }
-
-      .mainArea{
-        font-family: ITC Korinna;
-        font-size: 24px;
-        text-align: center;
-      }
-    </style>
-
-  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
- <body>
-    <!-- Start of navbar -->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid navbar-custom">
 
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="row">
-          <div class="navbar-header">
- 
-            <div class="col-xs-12 phone-nav">
-              <img src="logo.JPG" id="logo">
-            </div>
-          </div>
+<body>
+  <!-- Start of navbar -->
+  <nav class="navbar navbar-inverse bg-primary">
+    <div class="container-fluid navbar-custom">
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right navbar-right-custom">
-              <li><a href="profile.html">My Profile</a></li>
-              <li><a href="survey.html">Survey</a></li>
-              <li><a href="index.html">Log Out</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div>
-      </div><!-- /.container-fluid -->
-    </nav>
-
-<!-- jumbotron header  -->
-
-    <div class="container text-center">
+      <!--Brand and toggle get grouped for better mobile display -->
       <div class="row">
-        <h2>HateDate Survey Questions</h2>
-        <h3>Click the items that you HATE!</h3>
-      </div>
-    </div>
-
-
-  <div class="mainArea col-md-12 col-md-10 col-md-offset-1 col-md-offset-2">
-
-  </div>
-
-    <!--Survey questions (as buttons to click) go here  -->
-  <div id ="wrapper">
-    <div id="buttons-view" class="container">
-      <div class="container">
-          <div class="row">
-            <div class="col-md-4">
-
-            </div>
-
-       <!--        <button class="btn btn-default" id="saved-hates" type="submit">Submit</button> -->
+        <div class="navbar-header">
+          <div class="col-xs-12 phone-nav">
+            <span class="navbar-brand userName">Hate Date</span>
           </div>
+        </div>
 
+        <!--Collect the nav links, forms, and other content for toggling -->
+          <ul class="nav navbar-nav navbar-right navbar-right-custom">
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="survey.html">Survey</a></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
       </div>
-
     </div>
 
+  </nav>
+  <!-- End of navbar -->
+
+  <div class="container text-center">
+    <div class="row">
+      <h2>Survey Questions</h2>
+      <h3>Click the items that you HATE!</h3>
+    </div>
   </div>
 
-<!-- Firebase -->
-<!--<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script> -->
-<!-- jQuery -->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.map"></script> -->
-<!-- Script -->
-<script type="text/javascript" src= "survey.js"></script>
+  <div class="mainArea col-md-12"></div>
 
+  <!-- Submit Button is appended along with 'hates' buttons when 'start' is clicked -->
+  <div class="submitBtn col-md-12"></div>
+
+  <!-- Start of footer -->
+  <div class="footer">
+    <div class="container" style="text-align:center">
+      <div class="about-us">
+        <a href="#" class="info">About</a>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <div class="copyright">&copy; Hater Dater 2017</div>
+      </div>
+    </div>
+  </div>
+  <!-- End of footer -->
+
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="javascript/survey.js"></script>
 </body>
+
 </html>

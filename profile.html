@@ -1,137 +1,51 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+  
+<head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>My Profile</title>
+  <title>My Profile</title>
 
-    <!-- Boostrap Stylesheet -->
-     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+  <!-- Boostrap Stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Lobster+Two" rel="stylesheet">
 
-    <!-- Our own CSS stylesheet --><!-- 
-    <link rel="stylesheet" href="assets/css/styles.css" media="screen"> -->
+  <!-- Our own CSS stylesheet -->
+  <link rel="stylesheet" href="css/profile.css" media="screen">
 
-    <style type="text/css">
-      body{
-        background-color: Indianred;
-      }
-      .navbar-right-custom {
-        font-size:25px;
-        padding-top:10px;
-      }
-      nav {
-        padding-left:10%;
-        padding-right:10%;
-        padding-bottom:10px;
-      }
-      .userName {
-        font-size: 30px;
-        text-align: center;
-        padding:20px;
-      }
-      .about-me-content {
-        border:solid;
-        height:700px;
-        overflow:auto;
-        background-color:white;
-        text-align: center;
-        padding:20px;
-      }
-      .hatebox{
-        border:solid;
-        height:600px;
-        background-color:white;
-        text-align: center;
-        padding:20px;
-      }
-      .wrap {
-        padding-bottom:15px;
-      }
-      #profile-image {
-        padding:10px;
-      }
-      footer {
-        background-color:#FBBBB9;
-        padding:10px;
-        width:100%;
-        font-size: 15px;
-      }
-      
-      /* Input Button Styling */
-      label.upload-image{
-        width: 100px;
-        height: 40px;
-        background-color: black;
-        text-align: center;
-        color: white;
-      }
-      #restaurant-area{
-        border:solid;
-        height:200px;
-        background-color:white;
-        text-align: center;
-        padding:20px;
-      }
-      #hate-content{
-        float:left;
-      }
-      .box {
-        padding:20px;
-      }
-      input#file{
-      }
-      .modal-title, .panel-title {
-        text-align: center;
-      }
-      #modal-body{
-        text-align: center;
-        padding:5px;
-        font-size: 20px;
-      }
-      .restaurantHeader {
-        font-size:20px;
-        padding:10px;
-      }
-
-      .showDiv {
-        padding:10px;
-        font-size: 20px;
-      }
-
-    </style>
-
-  </head>
+</head>
 
   <body>
-    <!-- Start of navbar -->
-    <nav class="navbar navbar-default">
-      <div class="container-fluid navbar-custom">
+    <!-- Start of navbar-->
+    <nav class="navbar navbar-inverse bg-primary">
+    <div class="container-fluid navbar-custom">
 
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="row">
-          <div class="navbar-header">
- 
-            <div class="col-xs-12 phone-nav">
-              <img src="logo.JPG" id="logo">
-            </div>
+      <!--Brand and toggle get grouped for better mobile display -->
+      <div class="row">
+        <div class="navbar-header">
+
+          <div class="col-xs-12 phone-nav">
+            <span class="navbar-brand userName">Hate Date</span>
           </div>
-
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right navbar-right-custom">
-              <li><a href="profile.html">My Profile</a></li>
-              <li><a href="survey.html">Survey</a></li>
-              <li><a href="index.html">Log Out</a></li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
         </div>
-      </div><!-- /.container-fluid -->
-    </nav>
+
+        <!--Collect the nav links, forms, and other content for toggling -->
+          <ul class="nav navbar-nav navbar-right navbar-right-custom">
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="survey.html">Survey</a></li>
+            <li><a href="index.html">Logout</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+    </div>
+
+  </nav>
     <!-- End of navbar -->
 
 
@@ -144,15 +58,19 @@
 
               <!-- Sumbit Photo -->
   
+              <div class="hide-after-submit">
               <h3> Upload a profile photo</h3>
+              
               <label class="image-upload">
-              <input type="file" class="image-upload" id="imgFile">
+                <input type="file" class="image-upload" id="imgFile">
               </label>
               <button type="btn btn-primary" id="uploadButton" onclick="uploadFile()">
               Submit</button>
+              </div>
               <hr>
-
-              <img height="125" width="125"/>
+              <div>
+                <img class="img" id="profile-pic">
+              </div>
                <!--  Captured Form Info-->
             <div id="demographics">
               <p id="name"></p>
@@ -182,27 +100,28 @@
             </article>
 
           </div>
+          
           <div class="col-md-8">
             <!-- Start of Connect With Me Area -->
             <div class="row">
-            <div id="restaurant-area">
-            <div class="restaurantHeader">See What Restaurants are Around</div>
-              <span id="location-form">
-                <input type="text" id="location-input">
-                <input id="add-location" type="submit" value="Refresh Location">
-                
-               <div id="restaurantDisplay" class="showDiv"></div>
-               <div id="costDisplay" class="showDiv"></div>
 
+      <div class="col-lg-12">
+            <div id="location-area">
+              <span id="location-form">
+              <div class="weatherQuestion">Check the weather</div>
+                <input type="text" id="location-input">
+                <input id="add-weather" type="submit" value="Enter a Location">      
+                </span>
+                <div id="weatherDisplay" class="weatherDiv"></div>
               </span>
             </div>
             </div>
           </div>
-          <div class="col-md-8">
-            <div class="row">
-           
+      </div>
 
-  <div class="row">
+
+  <div class="col-md-8">
+     <div class="row">
       <div class="col-lg-12">
 
         <div class="panel panel-primary">
@@ -216,7 +135,7 @@
                           <th>Full Name</th>
                           <th>Gender</th>
                           <th>Age</th>
-                          <th>Link</th>
+                          <th>Other Hates</th>
                                 <!-- Modal -->
                                 <div class="modal fade" id="myModal" role="dialog">
                                   <div class="modal-dialog">
@@ -235,14 +154,12 @@
                                 </div>
                               </div>
                             </div>
-                        </tr>
+                          </tr>
                         </thead>
                       <tbody></tbody>
                     </table>
                   </div> 
                 </div>
-              </div>
-            </section>
 
           </div>
         </section>
@@ -272,10 +189,8 @@
     <!-- Bootstrap CDN -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-
-<script src="profile.js"></script>
-    
-    
+    <script type="text/javascript" src="javascript/profile.js"></script>
+        
   </body>
 
 </html>
