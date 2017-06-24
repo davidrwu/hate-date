@@ -1,3 +1,3 @@
 Hate Date Web Application
 
-https://davidrwu.github.io/hatedate/
+https://davidrwu.github.io/hate-date/
