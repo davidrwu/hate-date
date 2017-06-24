@@ -33,13 +33,13 @@ function errData(err) {
 
 $("#add-profile").on("click", function() {
   var questionVal = false;
-  var profileAge = $("#profile-age").val().trim().charAt(0).toUpperCase();
+  var profileAge = $("#profile-age").val().trim().toUpperCase();
   var profileEmail = $("#profile-email").val().trim();
-  var profileFirstName = $("#profile-first-name").val().trim().charAt(0).toUpperCase();
-  var profileLastName = $("#profile-last-name").val().trim().charAt(0).toUpperCase();
-  var profileGender = $("#profile-gender").val().trim().charAt(0).toUpperCase();
-  var profileCity = $("#profile-city").val().trim().charAt(0).toUpperCase();
-  var profileState = $("#profile-state").val().trim().charAt(0).toUpperCase();
+  var profileFirstName = $("#profile-first-name").val().trim().toUpperCase();
+  var profileLastName = $("#profile-last-name").val().trim().toUpperCase();
+  var profileGender = $("#profile-gender").val().trim().toUpperCase();
+  var profileCity = $("#profile-city").val().trim().toUpperCase();
+  var profileState = $("#profile-state").val().trim().toUpperCase();
   var user = firebase.auth().currentUser.uid;
   var pushedAnswers = [];
 
