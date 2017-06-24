@@ -92,7 +92,7 @@ $('.submitBtn').on('click', function(){
 
   database.ref().child('hates').push(pushed);
   }
-  $("#mainArea").hide();
+  $(".submitBtn").hide();
 })
 
 $(".mainArea").on('click', '.btn-danger', function(event){
